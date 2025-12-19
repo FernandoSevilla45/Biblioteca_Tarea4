@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Libros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="categoriaSeleccionada; else sinSeleccion">
+    <h2>{{ categoriaSeleccionada }}</h2>
+
+    <ion-card *ngFor="let libro of librosMostrados" class="ion-margin-bottom">
+      <ion-card-header>
+        <ion-card-title>{{ libro }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <ng-template #sinSeleccion>
+    <p>Selecciona una categoría desde el Catálogo para ver los libros.</p>
+  </ng-template>
+</ion-content>

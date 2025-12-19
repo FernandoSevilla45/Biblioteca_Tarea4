@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Catálogo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let categoria of categorias" [routerLink]="['/tabs/mis-libros', categoria]">
+      {{ categoria }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header class="ion-align-items-center ion-justify-content-start" style="display: flex; align-items: center;">
+      <ion-icon name="person-circle-outline" style="font-size: 50px; margin-right: 15px;"></ion-icon>
+      <ion-card-title>
+        {{ perfil.nombre }} {{ perfil.apellido }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Edad</ion-label>
+        <ion-text>{{ perfil.edad }} años</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ocupación</ion-label>
+        <ion-text>{{ perfil.ocupacion }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ciudad</ion-label>
+        <ion-text>{{ perfil.ciudad }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>País</ion-label>
+        <ion-text>{{ perfil.pais }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
