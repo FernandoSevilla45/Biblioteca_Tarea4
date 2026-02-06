@@ -5,9 +5,12 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <!-- PERFIL -->
   <ion-card>
-    <ion-card-header class="ion-align-items-center ion-justify-content-start" style="display: flex; align-items: center;">
-      <ion-icon name="person-circle-outline" style="font-size: 50px; margin-right: 15px;"></ion-icon>
+    <ion-card-header class="ion-align-items-center ion-justify-content-start"
+      style="display: flex; align-items: center;">
+      <ion-icon name="person-circle-outline"
+        style="font-size: 50px; margin-right: 15px;"></ion-icon>
       <ion-card-title>
         {{ perfil.nombre }} {{ perfil.apellido }}
       </ion-card-title>
@@ -29,6 +32,21 @@
       <ion-item>
         <ion-label>País</ion-label>
         <ion-text>{{ perfil.pais }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- HISTORIAL LABORAL -->
+  <h2 style="margin-top: 20px;">Historial Laboral</h2>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item *ngFor="let trabajo of historialLaboral">
+        <ion-label>
+          <h3>{{ trabajo.empresa }}</h3>
+          <p>{{ trabajo.cargo }}</p>
+          <p>{{ trabajo.periodo }}</p>
+        </ion-label>
       </ion-item>
     </ion-card-content>
   </ion-card>
